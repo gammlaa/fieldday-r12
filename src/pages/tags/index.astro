@@ -1,0 +1,34 @@
+---
+import { getAllPosts, getUniqueTagsWithCount } from "@/data/post";
+import PageLayout from "@/layouts/Base.astro";
+
+const allPosts = await getAllPosts();
+const allTags = getUniqueTagsWithCount(allPosts);
+
+const meta = {
+	description: "Alle Themen im Blog des R12 Fieldday.",
+	title: "Tags",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-6">Tags</h1>
+	<ul class="space-y-4">
+		{
+			allTags.map(([tag, val]) => (
+				<li class="flex items-center gap-x-2">
+					<a
+						class="cactus-link inline-block"
+						href={`/tags/${tag}/`}
+						title={`Beitraege mit dem Tag: ${tag}`}
+					>
+						&#35;{tag}
+					</a>
+					<span class="inline-block">
+						- {val} Beitrag{val > 1 && "e"}
+					</span>
+				</li>
+			))
+		}
+	</ul>
+</PageLayout>

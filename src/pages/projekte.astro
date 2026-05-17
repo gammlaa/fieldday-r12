@@ -1,0 +1,51 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description:
+		"Bastelprojekte, Antennen, Messaufbauten und portable Technik rund um den R12 Fieldday.",
+	title: "Projekte",
+};
+
+const projects = [
+	{
+		title: "Portable Antennen",
+		description:
+			"Aufbauten fuer Kurzwelle und UKW, die sich auf dem Fieldday schnell errichten und vergleichen lassen.",
+		status: "in Vorbereitung",
+	},
+	{
+		title: "Stromversorgung",
+		description:
+			"Akkus, Solar, Verteilung und Verbrauchsmessung fuer Funkbetrieb abseits fester Infrastruktur.",
+		status: "in Vorbereitung",
+	},
+	{
+		title: "Mess- und Testaufbauten",
+		description:
+			"Kleine Werkzeuge fuer Antennenabgleich, Pegelkontrolle und gemeinsame Experimente vor Ort.",
+		status: "in Vorbereitung",
+	},
+];
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-12">Projekte</h1>
+	<div class="prose prose-sm prose-cactus mb-10 max-w-none">
+		<p>
+			Hier werden nach und nach Bastelprojekte gesammelt, die beim Fieldday entstehen, getestet
+			oder weiterentwickelt werden.
+		</p>
+	</div>
+	<ul class="space-y-6" role="list">
+		{
+			projects.map((project) => (
+				<li class="border-muted border-t pt-5">
+					<h2 class="title text-lg">{project.title}</h2>
+					<p class="mt-2">{project.description}</p>
+					<p class="text-muted mt-2 text-xs font-semibold uppercase">{project.status}</p>
+				</li>
+			))
+		}
+	</ul>
+</PageLayout>
