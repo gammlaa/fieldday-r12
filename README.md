@@ -28,7 +28,7 @@ Neue Tags funktionieren automatisch. Optional kann zu einem Tag eine Datei in `s
 
 ## Entwicklung
 
-Die aktuelle Theme-Version benoetigt Node 22.12.0 oder neuer. Netlify ist in `netlify.toml` entsprechend konfiguriert.
+Die aktuelle Theme-Version benoetigt Node 22.12.0 oder neuer. Netlify ist in `netlify.toml` auf die aktuelle Node-22-Linie konfiguriert.
 
 ```bash
 pnpm install
@@ -45,7 +45,7 @@ Netlify:
 
 - Build command: `pnpm build`
 - Publish directory: `dist`
-- Node: `22.12.0`
+- Node: `22`
 - pnpm: `10.23.0`
 
 Die finale Domain muss vor dem Livegang in `src/site.config.ts` unter `url` eingetragen werden.

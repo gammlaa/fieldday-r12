@@ -3,5 +3,6 @@
 	publish = "dist"
 
 [build.environment]
-	NODE_VERSION = "22.12.0"
+	NODE_VERSION = "22"
 	PNPM_VERSION = "10.23.0"
+	ASTRO_TELEMETRY_DISABLED = "1"
