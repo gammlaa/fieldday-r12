@@ -9,8 +9,7 @@ Astro-Webseite fuer den Fieldday und die aktuellen Aktivitaeten des DARC Ortsver
 - Projektliste: `src/pages/projekte.astro`
 - Blogposts: `src/content/post/*.md`
 - Tag-Beschreibungen: `src/content/tag/*.md`
-- Impressum: `src/pages/impressum.astro`
-- Datenschutz: `src/pages/datenschutz.astro`
+- Impressum und Datenschutz: `src/pages/impressum.astro`
 
 ## Markdown-Frontmatter
 
