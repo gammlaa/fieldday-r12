@@ -5,7 +5,7 @@ import { menuLinks } from "@/site.config";
 import { siteConfig } from "../../site.config";
 ---
 
-<header class="group relative mb-28 flex items-center sm:ps-28" id="main-header">
+<header class="group relative mb-28 flex items-center sm:ps-24" id="main-header">
 	<div class="flex sm:flex-col">
 		<a
 			aria-current={Astro.url.pathname === "/" ? "page" : false}
@@ -14,7 +14,7 @@ import { siteConfig } from "../../site.config";
 		>
 			<span
 				aria-hidden="true"
-				class="me-4 inline-flex h-12 w-24 flex-none items-center font-bold text-5xl leading-none sm:absolute sm:-start-28 sm:me-0 sm:h-14 sm:w-28 sm:items-start sm:text-[3.5rem]"
+				class="me-4 inline-flex h-12 w-24 flex-none items-center font-bold text-5xl leading-none sm:absolute sm:-start-24 sm:me-0 sm:h-14 sm:w-24 sm:items-start sm:text-[3.25rem]"
 			>
 				<span class="logo-mark-r">R</span><span class="logo-mark-12">12</span>
 			</span>
@@ -22,7 +22,7 @@ import { siteConfig } from "../../site.config";
 		</a>
 		<nav
 			aria-label="Main menu"
-			class="bg-global-bg absolute -inset-x-4 top-12 hidden flex-col divide-y px-2 py-4 group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:-ms-4 sm:mt-1 sm:flex sm:flex-row sm:divide-x sm:divide-y-0 sm:bg-transparent sm:p-0"
+			class="bg-global-bg absolute -inset-x-4 top-12 hidden flex-col divide-y px-2 py-4 group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:mt-1 sm:flex sm:flex-row sm:divide-x sm:divide-y-0 sm:bg-transparent sm:p-0"
 			id="navigation-menu"
 		>
 			{
@@ -84,27 +84,25 @@ import { siteConfig } from "../../site.config";
 <style>
 	.logo-mark-r,
 	.logo-mark-12 {
-		transition:
-			color 160ms ease,
-			text-shadow 160ms ease;
+		transition: color var(--color-mode-transition-duration) var(--color-mode-transition-easing);
 	}
 
 	.logo-mark-r {
-		color: #2abc89;
+		color: var(--logo-r-color, #2abc89);
 	}
 
 	.logo-mark-12 {
-		color: #d482ab;
+		color: var(--logo-12-color, #d482ab);
 	}
 
-	.logo-link:hover .logo-mark-r,
-	.logo-link:focus-visible .logo-mark-r {
-		color: #d482ab;
+	:global(html[data-theme="light"]) .logo-link {
+		--logo-r-color: #2abc89;
+		--logo-12-color: #d482ab;
 	}
 
-	.logo-link:hover .logo-mark-12,
-	.logo-link:focus-visible .logo-mark-12 {
-		color: #2abc89;
+	:global(html[data-theme="dark"]) .logo-link {
+		--logo-r-color: #d482ab;
+		--logo-12-color: #2abc89;
 	}
 </style>
 
