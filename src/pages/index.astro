@@ -18,20 +18,56 @@ const pinnedPosts = allPostsByDate
 	.filter((p) => p.data.pinned)
 	.take(MAX_PINNED_POSTS)
 	.toArray();
+
+const eventDetails = [
+	{ label: "Datum", value: "TT. Monat 2026" },
+	{ label: "Dauer", value: "Beginn und Ende werden noch bekanntgegeben" },
+	{ label: "Ort", value: "Musterwiese am Funkplatz" },
+	{ label: "Adresse", value: "Musterstrasse 12, 12345 Musterstadt" },
+];
+
+const osmUrl = "https://www.openstreetmap.org/";
 ---
 
 <PageLayout meta={{ title: "Start" }}>
 	<section>
 		<h1 class="title mb-12">Fieldday bei R12</h1>
 		<p class="mb-4">
-			Hier entsteht die Webseite zum Fieldday des DARC Ortsverbandes R12: mit Berichten vom
-			Funkbetrieb, aktuellen Terminen, Eindruecken vom Platz und Projekten aus der Werkstatt.
+			Der DARC Ortsverband Romeo 12 plant einen Fieldday und laedt herzlich zum Besuch ein.
+			Willkommen sind Mitglieder, Nachbar-Ortsverbaende, Amateurfunkinteressierte und alle, die
+			Funkbetrieb, portable Technik und gemeinsame Projekte aus der Naehe erleben moechten.
 		</p>
 		<p>
-			Der Blog sammelt laufende Aktivitaeten. Die Fieldday-Seite erklaert die Idee der
-			Veranstaltung, und unter Projekte finden sich spaeter Antennen, Geraete, Messaufbauten und
-			kleine Experimente.
+			Auf dieser Seite sammeln wir die wichtigsten Informationen zur Veranstaltung. Die Daten sind
+			aktuell noch Platzhalter und werden ergaenzt, sobald Termin und Ort feststehen.
 		</p>
+	</section>
+	<section class="mt-12">
+		<h2 class="title mb-6 text-xl">Wichtige Informationen</h2>
+		<div class="grid gap-8 sm:grid-cols-[minmax(0,1fr)_16rem]">
+			<dl class="divide-muted divide-y">
+				{
+					eventDetails.map((detail) => (
+						<div class="grid gap-1 py-3 sm:grid-cols-[8rem_1fr]">
+							<dt class="text-muted font-semibold">{detail.label}</dt>
+							<dd>{detail.value}</dd>
+						</div>
+					))
+				}
+			</dl>
+			<div class="border-muted bg-quote/5 flex min-h-48 flex-col justify-between border p-4">
+				<div>
+					<p class="title text-lg">Karte</p>
+					<p class="text-muted mt-3">
+						Der genaue Veranstaltungsort wird hier spaeter mit Adresse und
+						OpenStreetMap-Link eingetragen.
+					</p>
+				</div>
+				<a class="cactus-link mt-6 inline-block self-start" href={osmUrl} rel="noreferrer" target="_blank">
+					Auf OpenStreetMap oeffnen
+				</a>
+			</div>
+		</div>
 	</section>
 	{
 		pinnedPosts.length > 0 && (

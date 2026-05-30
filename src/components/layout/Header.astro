@@ -5,7 +5,7 @@ import { menuLinks } from "@/site.config";
 import { siteConfig } from "../../site.config";
 ---
 
-<header class="group relative mb-28 flex items-center sm:ps-18" id="main-header">
+<header class="group relative mb-28 flex items-center sm:ps-24" id="main-header">
 	<div class="flex sm:flex-col">
 		<a
 			aria-current={Astro.url.pathname === "/" ? "page" : false}
@@ -14,25 +14,25 @@ import { siteConfig } from "../../site.config";
 		>
 			<svg
 				aria-hidden="true"
-				class="me-3 h-10 w-6 sm:absolute sm:-start-18 sm:me-0 sm:h-20 sm:w-12"
+				class="me-3 h-10 w-12 flex-none sm:absolute sm:-start-24 sm:me-0 sm:h-20 sm:w-24"
 				fill="none"
 				focusable="false"
-				viewBox="0 0 272 480"
+				viewBox="0 0 560 480"
 				xmlns="http://www.w3.org/2000/svg"
 			>
 				<title>R12 Fieldday Logo</title>
 				<path
 					fill="#cdffb8"
-					d="M90 53 136 26v400l-46 27zM181 106l45-26v133l-45 27zM136 266l45-26 45 160-45 27z"
+					d="M84 52 128 27v398l-44 26zM172 104l43-25v132l-43 25zM128 263l44-25 43 159-43 25zM84 291l44-26 44 26-44 25zM264 108l36-21v318l-36 21zM372 79l36-21v344l-36 21zM444 263l36-21v80l-36 21z"
 				></path><path
 					fill="#d482ab"
-					d="M90 53 136 26 226 80 181 106zM90 240l46-27 90 54-45 27zM136 266l45-26 45 27-45 27z"
+					d="M84 52 128 27 215 79 172 104zM84 238l44-25 87 52-43 26zM128 263l44-25 43 27-43 26zM84 291l44-26 44 26-44 25zM228 129l72-42 36 21-72 42zM336 79l36-21 72 42-36 21zM372 264l72-42 36 21-72 42z"
 				></path><path
 					fill="#2abc89"
-					d="M45 80 90 53v400l-45 27zM90 53l91 53v134l-45 26-46-27v-80l46 27v-53l-46-27zM90 240l91 54 45 160-45 26-45-160-46-27z"
+					d="M40 78 84 52v399l-44 25zM84 52l88 52v132l-44 27-44-27v-79l44 26v-52l-44-27zM84 238l88 53 43 158-43 27-44-160-44-25zM228 129l36 21v276l-36 21zM336 79l72 42v301l-36 26V132l-36-21zM372 264l72-42 36 21-72 42v53l72-42v80l-108 63v-80l72-42v-53z"
 				></path>
 			</svg>
-			<span class="text-xl font-bold sm:text-2xl">{siteConfig.title}</span>
+			<span class="text-xl font-bold whitespace-nowrap sm:text-2xl">{siteConfig.title}</span>
 		</a>
 		<nav
 			aria-label="Main menu"
