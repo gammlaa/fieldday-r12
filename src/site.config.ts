@@ -10,9 +10,9 @@ export const siteConfig: SiteConfig = {
 		- The link value found in src/components/layout/Header.astro L:35
 		- In the footer found in src/components/layout/Footer.astro L:12
 	*/
-	title: "R12 Fieldday",
+	title: "Fieldday",
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "DARC Ortsverband R12",
+	author: "DO1UMR",
 	// Used as the default description meta property and webmanifest description
 	description: "Fieldday, Amateurfunk und Bastelprojekte des DARC Ortsverbandes R12.",
 	// HTML lang property, found in src/layouts/Base.astro L:18 & astro.config.ts L:48

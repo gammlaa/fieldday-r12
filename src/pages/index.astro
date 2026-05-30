@@ -12,7 +12,7 @@ const allPostsByDate = allPosts.sort(collectionDateSort) as CollectionEntry<"pos
 const latestPosts = allPostsByDate.slice(0, MAX_POSTS);
 
 // Pinned Posts, set to a max of 3;
-const MAX_PINNED_POSTS = 3;
+const MAX_PINNED_POSTS = 1;
 const pinnedPosts = allPostsByDate
 	.values()
 	.filter((p) => p.data.pinned)

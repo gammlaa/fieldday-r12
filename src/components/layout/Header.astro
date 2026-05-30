@@ -5,16 +5,16 @@ import { menuLinks } from "@/site.config";
 import { siteConfig } from "../../site.config";
 ---
 
-<header class="group relative mb-28 flex items-center sm:ps-18" id="main-header">
+<header class="group relative mb-28 flex items-center sm:ps-32" id="main-header">
 	<div class="flex sm:flex-col">
 		<a
 			aria-current={Astro.url.pathname === "/" ? "page" : false}
-			class="logo-link inline-flex items-center sm:relative sm:inline-block sm:grayscale sm:hover:filter-none"
+			class="logo-link inline-flex items-center sm:relative sm:inline-block"
 			href="/"
 		>
 			<span
 				aria-hidden="true"
-				class="me-3 inline-flex h-10 w-12 flex-none items-center font-bold text-2xl leading-none sm:absolute sm:-start-18 sm:me-0 sm:h-20 sm:w-12 sm:items-start sm:text-3xl"
+				class="me-4 inline-flex h-12 w-24 flex-none items-center font-bold text-5xl leading-none sm:absolute sm:-start-32 sm:me-0 sm:h-24 sm:w-28 sm:items-start sm:text-6xl"
 			>
 				<span class="logo-mark-r">R</span><span class="logo-mark-12">12</span>
 			</span>
