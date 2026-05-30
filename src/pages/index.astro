@@ -25,8 +25,6 @@ const eventDetails = [
 	{ label: "Ort", value: "Musterwiese am Funkplatz" },
 	{ label: "Adresse", value: "Musterstrasse 12, 12345 Musterstadt" },
 ];
-
-const osmUrl = "https://www.openstreetmap.org/";
 ---
 
 <PageLayout meta={{ title: "Start" }}>
@@ -44,30 +42,16 @@ const osmUrl = "https://www.openstreetmap.org/";
 	</section>
 	<section class="mt-12">
 		<h2 class="title mb-6 text-xl">Wichtige Informationen</h2>
-		<div class="grid gap-8 sm:grid-cols-[minmax(0,1fr)_16rem]">
-			<dl class="divide-muted divide-y">
-				{
-					eventDetails.map((detail) => (
-						<div class="grid gap-1 py-3 sm:grid-cols-[8rem_1fr]">
-							<dt class="text-muted font-semibold">{detail.label}</dt>
-							<dd>{detail.value}</dd>
-						</div>
-					))
-				}
-			</dl>
-			<div class="border-muted bg-quote/5 flex min-h-48 flex-col justify-between border p-4">
-				<div>
-					<p class="title text-lg">Karte</p>
-					<p class="text-muted mt-3">
-						Der genaue Veranstaltungsort wird hier spaeter mit Adresse und
-						OpenStreetMap-Link eingetragen.
-					</p>
-				</div>
-				<a class="cactus-link mt-6 inline-block self-start" href={osmUrl} rel="noreferrer" target="_blank">
-					Auf OpenStreetMap oeffnen
-				</a>
-			</div>
-		</div>
+		<dl class="divide-muted divide-y">
+			{
+				eventDetails.map((detail) => (
+					<div class="grid gap-1 py-3 sm:grid-cols-[8rem_1fr]">
+						<dt class="text-muted font-semibold">{detail.label}</dt>
+						<dd>{detail.value}</dd>
+					</div>
+				))
+			}
+		</dl>
 	</section>
 	{
 		pinnedPosts.length > 0 && (
