@@ -5,7 +5,7 @@ import { menuLinks } from "@/site.config";
 import { siteConfig } from "../../site.config";
 ---
 
-<header class="group relative mb-28 flex items-center sm:ps-18" id="main-header">
+<header class="group relative mb-28 flex items-center sm:ps-[7.5rem]" id="main-header">
 	<div class="flex sm:flex-col">
 		<a
 			aria-current={Astro.url.pathname === "/" ? "page" : false}
@@ -14,7 +14,7 @@ import { siteConfig } from "../../site.config";
 		>
 			<span
 				aria-hidden="true"
-				class="me-3 inline-flex h-10 w-12 flex-none items-center font-bold text-2xl leading-none sm:absolute sm:-start-18 sm:me-0 sm:h-20 sm:w-12 sm:items-start sm:text-3xl"
+				class="me-3 inline-flex h-10 w-12 flex-none items-center font-bold text-2xl leading-none sm:absolute sm:-start-[7.5rem] sm:me-0 sm:h-[3.5rem] sm:w-[6.5rem] sm:items-start sm:text-[3.5rem]"
 			>
 				<span class="logo-mark-r">R</span><span class="logo-mark-12">12</span>
 			</span>
@@ -22,7 +22,7 @@ import { siteConfig } from "../../site.config";
 		</a>
 		<nav
 			aria-label="Main menu"
-			class="bg-global-bg absolute -inset-x-4 top-12 hidden flex-col divide-y px-2 py-4 group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:-ms-4 sm:mt-1 sm:flex sm:flex-row sm:divide-x sm:divide-y-0 sm:bg-transparent sm:p-0"
+			class="bg-global-bg absolute -inset-x-4 top-12 hidden flex-col divide-y px-2 py-4 group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:mt-1 sm:flex sm:flex-row sm:divide-x sm:divide-y-0 sm:bg-transparent sm:p-0"
 			id="navigation-menu"
 		>
 			{
