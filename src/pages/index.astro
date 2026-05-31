@@ -23,7 +23,11 @@ const eventDetails = [
 	{ label: "Datum", value: "TT. Monat 2026" },
 	{ label: "Beginn", value: "Beginn und Ende werden noch bekanntgegeben" },
 	{ label: "Ort", value: "Groß Selbeck" },
-	{ label: "Adresse", value: "<a href="https://www.openstreetmap.org/?mlat=51.321125&mlon=6.946503#map=17/51.321125/6.946503" target="_blank" rel="noopener noreferrer">Selbeckerstraße 16, 42579 Heiligenhaus</a>" },
+	{
+		label: "Adresse",
+		value: "Selbeckerstraße 16, 42579 Heiligenhaus",
+		link: "https://www.openstreetmap.org/?mlat=51.321125&mlon=6.946503#map=17/51.321125/6.946503",
+	},
 ];
 ---
 
@@ -47,7 +51,15 @@ const eventDetails = [
 				eventDetails.map((detail) => (
 					<div class="grid gap-1 py-3 sm:grid-cols-[8rem_1fr]">
 						<dt class="text-muted font-semibold">{detail.label}</dt>
-						<dd>{detail.value}</dd>
+						<dd>
+							{detail.link ? (
+								<a href={detail.link} target="_blank" rel="noopener noreferrer" class="underline">
+									{detail.value}
+								</a>
+							) : (
+								detail.value
+							)}
+						</dd>
 					</div>
 				))
 			}
