@@ -32,7 +32,7 @@ import { siteConfig } from "../../site.config";
 				menuLinks.map((link) => (
 					<a
 						aria-current={Astro.url.pathname === link.path ? "page" : false}
-						class="text-accent px-2 py-4 font-semibold sm:px-4 sm:py-0 sm:underline-offset-2 sm:hover:underline"
+						class="text-link px-2 py-4 font-semibold transition-opacity hover:opacity-80 sm:px-4 sm:py-0"
 						href={link.path}
 					>
 						{link.title}

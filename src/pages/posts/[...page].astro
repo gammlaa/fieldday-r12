@@ -61,7 +61,7 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 <PageLayout meta={meta}>
 	<div class="mb-12 flex items-center gap-3">
 		<h1 class="title">Posts</h1>
-		<a class="text-accent" href="/rss.xml" target="_blank">
+		<a class="text-link transition-opacity hover:opacity-80" href="/rss.xml" target="_blank">
 			<span class="sr-only">RSS feed</span>
 			<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name="mdi:rss" />
 		</a>
@@ -135,7 +135,7 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 						))}
 					</ul>
 					<span class="mt-4 block sm:text-end">
-						<a class="hover:text-link" href="/tags/">
+						<a class="text-link transition-opacity hover:opacity-80" href="/tags/">
 							Alle anzeigen <span aria-hidden="true">→</span>
 							<span class="sr-only">Blog-Tags</span>
 						</a>

@@ -17,7 +17,7 @@ const year = new Date().getFullYear();
 		<p id="footer_links" class="sr-only">Weitere Seiten</p>
 		{
 			[...menuLinks, { path: "/impressum/", title: "Impressum" }].map((link) => (
-				<a class="hover:text-global-text px-4 py-2 hover:underline sm:py-0" href={link.path}>
+				<a class="text-link px-4 py-2 transition-opacity hover:opacity-80 sm:py-0" href={link.path}>
 					{link.title}
 				</a>
 			))
