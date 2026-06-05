@@ -1,0 +1,32 @@
+---
+interface InfoItem {
+	href?: string;
+	label: string;
+	value: string;
+}
+
+interface Props {
+	items: InfoItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<dl class="not-prose border-link my-6 space-y-0 border-s-4 ps-4">
+	{
+		items.map((item) => (
+			<div class="grid gap-2 py-1 sm:grid-cols-[10rem_1fr]">
+				<dt class="text-muted font-semibold">{item.label}</dt>
+				<dd class="break-words">
+					{item.href ? (
+						<a class="cactus-link" href={item.href} rel="noopener noreferrer" target="_blank">
+							{item.value}
+						</a>
+					) : (
+						item.value
+					)}
+				</dd>
+			</div>
+		))
+	}
+</dl>

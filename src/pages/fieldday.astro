@@ -1,28 +1,127 @@
 ---
+import InfoList from "@/components/InfoList.astro";
 import PageLayout from "@/layouts/Base.astro";
 
 const meta = {
 	description:
-		"Die Idee hinter dem Fieldday des DARC Ortsverbandes R12: gemeinsam funken, bauen, testen und lernen.",
+		"Informationen zum zweitaegigen Fieldday des DARC Ortsverbandes R12 mit Funkbetrieb, Programm und Uebernachtung im eigenen Zelt.",
 	title: "Fieldday",
 };
+
+const locationItems = [
+	{ label: "Datum", value: "[Datum eintragen]" },
+	{ label: "Beginn", value: "[Uhrzeit eintragen]" },
+	{ label: "Ende", value: "[Uhrzeit eintragen]" },
+	{ label: "Ort", value: "Gut Anger" },
+	{
+		label: "Anfahrt",
+		value: "Gut Anger 1, 42579 Ratingen",
+		href: "https://www.openstreetmap.org/?mlat=51.319362&mlon=6.934621#map=18/51.319362/6.934621",
+	},
+];
+
+const campingItems = [
+	{ label: "Sanitaeranlagen", value: "vorhanden" },
+	{ label: "Strom", value: "vorhanden" },
+	{ label: "Ruhezeiten", value: "[Hinweis ergaenzen]" },
+	{ label: "Anmeldung", value: "[Regelung fuer Uebernachtung ergaenzen]" },
+];
+
+const radioItems = [
+	{ label: "Baender", value: "[z.B. Kurzwelle, UKW, weitere Baender]" },
+	{ label: "Betriebsarten", value: "[z.B. SSB, CW, digitale Betriebsarten]" },
+	{ label: "Stationen", value: "[Clubstation, Gastbetrieb, Vorfuehrstationen]" },
+	{ label: "Antennen", value: "[geplante Aufbauten ergaenzen]" },
+	{ label: "Projekte", value: "[Mess- und Bastelprojekte ergaenzen]" },
+];
+
+const programItems = [
+	{ label: "Tag 1", value: "[Aufbau, Begruessung, Funkbetrieb, Abendprogramm]" },
+	{ label: "Tag 2", value: "[Funkbetrieb, Workshops, Abbau]" },
+	{ label: "Workshops", value: "[Themen ergaenzen]" },
+	{ label: "Gemeinsame Aktionen", value: "[Aktionen ergaenzen]" },
+];
+
+const foodItems = [
+	{ label: "Essen", value: "[Regelung ergaenzen]" },
+	{ label: "Getraenke", value: "[Regelung ergaenzen]" },
+	{ label: "Gemeinsam", value: "[Fruehstueck, Grillen oder weitere Angebote ergaenzen]" },
+	{ label: "Einkauf", value: "[Einkaufsmoeglichkeiten in der Naehe ergaenzen]" },
+];
+
+const safetyItems = [
+	{ label: "Kabelwege", value: "Abspannungen und Kabelwege beachten" },
+	{ label: "Antennen und Masten", value: "Bei Arbeiten nur nach Absprache helfen" },
+	{ label: "Offenes Feuer", value: "[Regelung ergaenzen]" },
+	{ label: "Familien und Hunde", value: "[Hinweise ergaenzen]" },
+	{ label: "Notfallkontakt", value: "[Kontakt ergaenzen]" },
+];
+
+const contactItems = [
+	{ label: "Anmeldung", value: "[ja/nein/optional ergaenzen]" },
+	{ label: "Kontakt", value: "[E-Mail oder Ansprechpartner ergaenzen]" },
+	{ label: "Gaeste ohne Lizenz", value: "Ihr seid willkommen und koennt euch vor Ort melden." },
+];
 ---
 
 <PageLayout meta={meta}>
-	<h1 class="title mb-12">Fieldday</h1>
+	<h1 class="title mb-12">Fieldday bei R12</h1>
 	<div class="prose prose-sm prose-cactus max-w-none">
 		<p>
-			Der Fieldday ist der gemeinsame Treffpunkt fuer Funkbetrieb, Technik und Austausch im DARC
-			Ortsverband R12. Draussen wird aufgebaut, ausprobiert, gemessen, gefunkt und weitergedacht.
+			Der Fieldday des DARC Ortsverbandes Romeo 12 ist ein zweitaegiges Treffen fuer Funkbetrieb,
+			Technik und Austausch im Freien. Willkommen sind Mitglieder, Nachbar-Ortsverbaende,
+			Amateurfunkinteressierte und ausdruecklich auch Gaeste ohne eigene Amateurfunklizenz.
 		</p>
 		<p>
-			Im Mittelpunkt stehen portable Stationen, Antennenversuche, Stromversorgung abseits der
-			Steckdose, digitale Betriebsarten, klassische Kurzwelle und alles, was sich vor Ort sinnvoll
-			testen laesst.
+			Vor Ort wird aufgebaut, ausprobiert, gemessen, gefunkt und gemeinsam weitergedacht. Wer
+			Amateurfunk kennenlernen moechte, kann vorbeikommen, Fragen stellen und den Betrieb an den
+			Stationen miterleben.
 		</p>
+
+		<h2>Termin und Ort</h2>
+		<p>Die Veranstaltung laeuft ueber zwei Tage mit der Möglichkeit zu Zelten.</p>
+		<InfoList items={locationItems} />
+
+		<h2>Uebernachtung</h2>
 		<p>
-			Diese Seite soll die grundsaetzliche Idee der Veranstaltung zeigen. Konkrete Termine,
-			Rueckblicke und aktuelle Hinweise erscheinen im Blog.
+			Eine Uebernachtung im eigenen Zelt ist auf der Freiflaeche moeglich. Bitte bringt Zelt,
+			Schlafsack, Isomatte und alles mit, was ihr fuer die Nacht benoetigt.
 		</p>
+		<InfoList items={campingItems} />
+
+		<h2>Funkbetrieb und Technik</h2>
+		<p>
+			Geplant sind portable Stationen, Antennenaufbauten und gemeinsamer Funkbetrieb. Die konkreten
+			Baender, Betriebsarten und Rufzeichen werden spaeter ergaenzt.
+		</p>
+		<InfoList items={radioItems} />
+
+		<h2>Programm</h2>
+		<p>
+			Es wird ein Programm geben. Die einzelnen Programmpunkte, Zeiten und Verantwortlichen werden
+			hier nach und nach ergaenzt.
+		</p>
+		<InfoList items={programItems} />
+
+		<h2>Verpflegung</h2>
+		<p>
+			Informationen zur Verpflegung werden noch ergaenzt. Bitte plant vorerst mit Selbstversorgung,
+			bis die Details feststehen.
+		</p>
+		<InfoList items={foodItems} />
+
+		<h2>Sicherheit und Ruecksicht</h2>
+		<p>
+			Antennen, Abspannungen, Kabel und Masten gehoeren zum Fieldday dazu. Bitte achtet vor Ort auf
+			Stolperstellen, markierte Bereiche und die Hinweise des Organisationsteams.
+		</p>
+		<InfoList items={safetyItems} />
+
+		<h2>Anmeldung und Kontakt</h2>
+		<p>
+			Ob eine Anmeldung erforderlich ist und an wen Fragen gerichtet werden koennen, wird hier noch
+			ergaenzt.
+		</p>
+		<InfoList items={contactItems} />
 	</div>
 </PageLayout>
