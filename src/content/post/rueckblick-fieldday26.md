@@ -10,6 +10,6 @@ Vom 19. bis zum 21. September trafen sich die Funkamateure des OV Romeo 12 auf G
 
 Neben dem klassischen Funkbetrieb über verschiedene Bänder wurde auch die ISS als Relais genutzt. FT8 wurde ebenfalls fleißig gearbeitet und sorgte für zahlreiche Kontakte.
 
-Natürlich kam auch der persönliche Austausch nicht zu kurz. Zwischen Antennen, Funkgeräten und Technik wurde ausgiebig gefachsimpelt und gequatscht. Besonders gefreut haben wir uns über den Besuch von Amateurfunkern aus dem OV R14 Solingen, die gemeinsam mit den OMs von R12 am Fieldday teilnahmen.
+Natürlich kam auch der persönliche Austausch nicht zu kurz. Zwischen Antennen, Funkgeräten und Technik wurde ausgiebig gefachsimpelt und gequatscht. Besonders gefreut haben wir uns über den Besuch von Amateurfunkern aus dem OV R14 Solingen und von DC3E Chaospott.
 
 An dieser Stelle möchten wir uns ausdrücklich bei unseren Gastgebern auf Gut Anger für die herzliche Gastfreundschaft und die Möglichkeit bedanken, dort unseren Fieldday durchführen zu können.
